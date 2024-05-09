@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" ,initial-scale="1.0" />
+    <title>ContactUs</title>
+    <link rel="stylesheet" href="ContactUs.css" />
+</head>
+<body>
+    <div class="container">
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <h3>GET IN TOUCH</h3>
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Email id" required>
+            <input type="text" id="phone" placeholder="Phone no." required>
+            <textarea id="message" rows="4" placeholder="How can we help you?"></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </div>
+
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.elasticemail.com",
+                Username: "lokeshsuthar0123@gmail.com",
+                Password: "E354EF8CD4079783C3EE1668CA6C85BCCA45",
+                To: 'kolukalank@gmail.com',
+                From: "lokeshsuthar0123@gmail.com",
+                Subject:  "Mail From Contact Form",
+                Body: document.getElementById("message").value,
+
+            }).then(
+                message => alert(message)
+            );
+        }
+    </script>
+</body>
+</html>

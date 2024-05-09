@@ -1,0 +1,1477 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{602B9A74-C617-4B7A-9465-C6E12120E1EB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>E_Waste_Management_System</RootNamespace>
+    <AssemblyName>E-Waste Management System</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44353</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.css" />
+    <Content Include="About.html" />
+    <Content Include="AboutUs.jpg" />
+    <Content Include="Admin.aspx" />
+    <Content Include="admin.css" />
+    <Content Include="AdminCategory.aspx" />
+    <Content Include="AdminProduct.aspx" />
+    <Content Include="All_Product.aspx" />
+    <Content Include="All_Product_2.aspx" />
+    <Content Include="All_Product_3.aspx" />
+    <Content Include="All_Product_4.aspx" />
+    <Content Include="All_Product_5.aspx" />
+    <Content Include="App_Data\Shopping.mdf" />
+    <Content Include="App_Data\Shopping_log.ldf">
+      <DependentUpon>Shopping.mdf</DependentUpon>
+    </Content>
+    <Content Include="bad.png" />
+    <Content Include="C%28A%29.aspx" />
+    <Content Include="C%28A%29.png" />
+    <Content Include="C%28C%29.aspx" />
+    <Content Include="C%28C%29.png" />
+    <Content Include="C%28L%29.aspx" />
+    <Content Include="C%28L%29.png" />
+    <Content Include="C%28M%29.aspx" />
+    <Content Include="C%28P%29.png" />
+    <Content Include="C%28T%29.aspx" />
+    <Content Include="C%28T%29.png" />
+    <Content Include="camera.png" />
+    <Content Include="Cart%28H1%29.aspx" />
+    <Content Include="Cart%28H10%29.aspx" />
+    <Content Include="Cart%28H11%29.aspx" />
+    <Content Include="Cart%28H12%29.aspx" />
+    <Content Include="Cart%28H2%29.aspx" />
+    <Content Include="Cart%28H3%29.aspx" />
+    <Content Include="Cart%28H4%29.aspx" />
+    <Content Include="Cart%28H5%29.aspx" />
+    <Content Include="Cart%28H6%29.aspx" />
+    <Content Include="Cart%28H7%29.aspx" />
+    <Content Include="Cart%28H8%29.aspx" />
+    <Content Include="cart%28H9%29.aspx" />
+    <Content Include="Cart.aspx" />
+    <Content Include="cart.css" />
+    <Content Include="Checkout.aspx" />
+    <Content Include="Checkout.css" />
+    <Content Include="Contact.html" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="ContactUs.css" />
+    <Content Include="excellent.png" />
+    <Content Include="extra%28H1%29.png" />
+    <Content Include="faq-img.png" />
+    <Content Include="FAQ.aspx" />
+    <Content Include="FAQ.css" />
+    <Content Include="gallery-1.jpg" />
+    <Content Include="gallery-2.jpg" />
+    <Content Include="gallery-3.jpg" />
+    <Content Include="gallery.js" />
+    <Content Include="Game.html" />
+    <Content Include="GameScript.js" />
+    <Content Include="GameStyle.css" />
+    <Content Include="GameWords.js" />
+    <Content Include="GetDetails.aspx" />
+    <Content Include="H1%28M%29.png" />
+    <Content Include="H1%28M2%29.png" />
+    <Content Include="H1%28M3%29.png" />
+    <Content Include="H1%28M4%29.png" />
+    <Content Include="H1.aspx" />
+    <Content Include="H10%28M%29.png" />
+    <Content Include="H10%28M2%29.png" />
+    <Content Include="H10%28M3%29.png" />
+    <Content Include="H10%28M4%29.png" />
+    <Content Include="H10.aspx" />
+    <Content Include="H11%28A%29.png" />
+    <Content Include="H11%28A2%29.png" />
+    <Content Include="H11%28A3%29.png" />
+    <Content Include="H11%28A4%29.png" />
+    <Content Include="H11.aspx" />
+    <Content Include="H12%28L%29.png" />
+    <Content Include="H12%28L2%29.png" />
+    <Content Include="H12%28L3%29.png" />
+    <Content Include="H12%28L4%29.png" />
+    <Content Include="H12.aspx" />
+    <Content Include="H2%28T%29.png" />
+    <Content Include="H2%28T2%29.png" />
+    <Content Include="H2%28T3%29.png" />
+    <Content Include="H2%28T4%29.png" />
+    <Content Include="H2.aspx" />
+    <Content Include="H3%28C%29.png" />
+    <Content Include="H3%28C2%29.png" />
+    <Content Include="H3%28C3%29.png" />
+    <Content Include="H3%28C4%29.png" />
+    <Content Include="H3.aspx" />
+    <Content Include="H4%28L%29.png" />
+    <Content Include="H4%28L2%29.png" />
+    <Content Include="H4%28L3%29.png" />
+    <Content Include="H4%28L4%29.png" />
+    <Content Include="H4.aspx" />
+    <Content Include="H5%28A%29.png" />
+    <Content Include="H5%28A2%29.png" />
+    <Content Include="H5%28A3%29.png" />
+    <Content Include="H5%28A4%29.png" />
+    <Content Include="H5.aspx" />
+    <Content Include="H6%28L%29.png" />
+    <Content Include="H6%28L2%29.png" />
+    <Content Include="H6%28L3%29.png" />
+    <Content Include="H6%28L4%29.png" />
+    <Content Include="H6.aspx" />
+    <Content Include="H7%28M%29.png" />
+    <Content Include="H7%28M2%29.png" />
+    <Content Include="H7%28M3%29.png" />
+    <Content Include="H7%28M4%29.png" />
+    <Content Include="H7.aspx" />
+    <Content Include="H8%28T%29.png" />
+    <Content Include="H8%28T2%29.png" />
+    <Content Include="H8%28T3%29.png" />
+    <Content Include="H8%28T4%29.png" />
+    <Content Include="H8.aspx" />
+    <Content Include="H9%28C%29.png" />
+    <Content Include="H9%28C2%29.png" />
+    <Content Include="H9%28C3%29.png" />
+    <Content Include="H9%28C4%29.png" />
+    <Content Include="H9.aspx" />
+    <Content Include="L%28Can%29.png" />
+    <Content Include="L%28hp%29.png" />
+    <Content Include="L%28LG%29.png" />
+    <Content Include="L%28Mi%29.png" />
+    <Content Include="L%28SAM%29.png" />
+    <Content Include="offer%28ac%29.png" />
+    <Content Include="offer%28cam%29.png" />
+    <Content Include="offer%28Lap%29.png" />
+    <Content Include="offer%28tv%29.png" />
+    <Content Include="offer.aspx" />
+    <Content Include="offer2.png" />
+    <Content Include="offer3.png" />
+    <Content Include="offer4.png" />
+    <Content Include="offercartlap.aspx" />
+    <Content Include="P1%2810C%29.aspx" />
+    <Content Include="P1%2810C%29.png" />
+    <Content Include="P1%2810C2%29.png" />
+    <Content Include="P1%2810C3%29.png" />
+    <Content Include="P1%2810C4%29.png" />
+    <Content Include="P1%2811L%29.aspx" />
+    <Content Include="P1%2811L%29.png" />
+    <Content Include="P1%2811L2%29.png" />
+    <Content Include="P1%2811L3%29.png" />
+    <Content Include="P1%2811L4%29.png" />
+    <Content Include="P1%2812A%29.aspx" />
+    <Content Include="P1%2812A%29.png" />
+    <Content Include="P1%2812A2%29.png" />
+    <Content Include="P1%2812A3%29.png" />
+    <Content Include="P1%2812A4%29.png" />
+    <Content Include="P1%2813L%29.aspx" />
+    <Content Include="P1%2813L%29.png" />
+    <Content Include="P1%2813L2%29.png" />
+    <Content Include="P1%2813L3%29.png" />
+    <Content Include="P1%2813L4%29.png" />
+    <Content Include="P1%2814M%29.aspx" />
+    <Content Include="P1%2814M%29.png" />
+    <Content Include="P1%2814M2%29.png" />
+    <Content Include="P1%2814M3%29.png" />
+    <Content Include="P1%2814M4%29.png" />
+    <Content Include="P1%2815A%29.aspx" />
+    <Content Include="P1%2815A%29.png" />
+    <Content Include="P1%2815A2%29.png" />
+    <Content Include="P1%2815A3%29.png" />
+    <Content Include="P1%2815A4%29.png" />
+    <Content Include="P1%2816T%29.aspx" />
+    <Content Include="P1%2816T%29.png" />
+    <Content Include="P1%2816T2%29.png" />
+    <Content Include="P1%2816T3%29.png" />
+    <Content Include="P1%2816T4%29.png" />
+    <Content Include="P1%281L%29.aspx" />
+    <Content Include="P1%281L%29.png" />
+    <Content Include="P1%281L2%29.png" />
+    <Content Include="P1%281L3%29.png" />
+    <Content Include="P1%281L4%29.png" />
+    <Content Include="P1%282C%29.aspx" />
+    <Content Include="P1%282C%29.png" />
+    <Content Include="P1%282C2%29.png" />
+    <Content Include="P1%282C3%29.png" />
+    <Content Include="P1%282C4%29.png" />
+    <Content Include="P1%283M%29.aspx" />
+    <Content Include="P1%283M%29.png" />
+    <Content Include="P1%283M2%29.png" />
+    <Content Include="P1%283M3%29.png" />
+    <Content Include="P1%283M4%29.png" />
+    <Content Include="P1%284T%29.aspx" />
+    <Content Include="P1%284T%29.png" />
+    <Content Include="P1%284T2%29.png" />
+    <Content Include="P1%284T3%29.png" />
+    <Content Include="P1%284T4%29.png" />
+    <Content Include="P1%285M%29.aspx" />
+    <Content Include="P1%285M%29.png" />
+    <Content Include="P1%285M2%29.png" />
+    <Content Include="P1%285M3%29.png" />
+    <Content Include="P1%285M4%29.png" />
+    <Content Include="P1%286A%29.aspx" />
+    <Content Include="P1%286A%29.png" />
+    <Content Include="P1%286A2%29.png" />
+    <Content Include="P1%286A3%29.png" />
+    <Content Include="P1%286A4%29.png" />
+    <Content Include="P1%287T%29.aspx" />
+    <Content Include="P1%287T%29.png" />
+    <Content Include="P1%287T2%29.png" />
+    <Content Include="P1%287T3%29.png" />
+    <Content Include="P1%287T4%29.png" />
+    <Content Include="P1%288C%29.aspx" />
+    <Content Include="P1%288C%29.png" />
+    <Content Include="P1%288C2%29.png" />
+    <Content Include="P1%288C3%29.png" />
+    <Content Include="P1%288C4%29.png" />
+    <Content Include="P1%289T%29.aspx" />
+    <Content Include="P1%289T%29.png" />
+    <Content Include="P1%289T2%29.png" />
+    <Content Include="P1%289T3%29.png" />
+    <Content Include="P1%289T4%29.png" />
+    <Content Include="p1cart1.aspx" />
+    <Content Include="p1cart2.aspx" />
+    <Content Include="p1cart3.aspx" />
+    <Content Include="p1cart4.aspx" />
+    <Content Include="p1cart5.aspx" />
+    <Content Include="p1cart6.aspx" />
+    <Content Include="p1cart7.aspx" />
+    <Content Include="p1cart8.aspx" />
+    <Content Include="P2%2810T%29.aspx" />
+    <Content Include="P2%2810T%29.png" />
+    <Content Include="P2%2810T2%29.png" />
+    <Content Include="P2%2810T3%29.png" />
+    <Content Include="P2%2810T4%29.png" />
+    <Content Include="P2%2811M%29.aspx" />
+    <Content Include="P2%2811M%29.png" />
+    <Content Include="P2%2811M2%29.png" />
+    <Content Include="P2%2811M3%29.png" />
+    <Content Include="P2%2811M4%29.png" />
+    <Content Include="P2%2812A%29.aspx" />
+    <Content Include="P2%2812A%29.png" />
+    <Content Include="P2%2812A2%29.png" />
+    <Content Include="P2%2812A3%29.png" />
+    <Content Include="P2%2812A4%29.png" />
+    <Content Include="P2%2813M%29.aspx" />
+    <Content Include="P2%2813M%29.png" />
+    <Content Include="P2%2813M2%29.png" />
+    <Content Include="P2%2813M3%29.png" />
+    <Content Include="P2%2813M4%29.png" />
+    <Content Include="P2%2814L%29.aspx" />
+    <Content Include="P2%2814L%29.png" />
+    <Content Include="P2%2814L2%29.png" />
+    <Content Include="P2%2814L3%29.png" />
+    <Content Include="P2%2814L4%29.png" />
+    <Content Include="P2%2815A%29.png" />
+    <Content Include="P2%2815A%29.aspx" />
+    <Content Include="P2%2815A2%29.png" />
+    <Content Include="P2%2815A3%29.png" />
+    <Content Include="P2%2815A4%29.png" />
+    <Content Include="P2%2816C%29.aspx" />
+    <Content Include="P2%2816C%29.png" />
+    <Content Include="P2%2816C2%29.png" />
+    <Content Include="P2%2816C3%29.png" />
+    <Content Include="P2%2816C4%29.png" />
+    <Content Include="P2%281M%29.aspx" />
+    <Content Include="P2%281M%29.png" />
+    <Content Include="P2%281M2%29.png" />
+    <Content Include="P2%281M3%29.png" />
+    <Content Include="P2%281M4%29.png" />
+    <Content Include="P2%282T%29.aspx" />
+    <Content Include="P2%282T%29.png" />
+    <Content Include="P2%282T2%29.png" />
+    <Content Include="P2%282T3%29.png" />
+    <Content Include="P2%282T4%29.png" />
+    <Content Include="P2%283L%29.aspx" />
+    <Content Include="P2%283L%29.png" />
+    <Content Include="P2%283L2%29.png" />
+    <Content Include="P2%283L3%29.png" />
+    <Content Include="P2%283L4%29.png" />
+    <Content Include="P2%284C%29.aspx" />
+    <Content Include="P2%284C%29.png" />
+    <Content Include="P2%284C2%29.png" />
+    <Content Include="P2%284C3%29.png" />
+    <Content Include="P2%284C4%29.png" />
+    <Content Include="P2%285L%29.aspx" />
+    <Content Include="P2%285L%29.png" />
+    <Content Include="P2%285L2%29.png" />
+    <Content Include="P2%285L3%29.png" />
+    <Content Include="P2%285L4%29.png" />
+    <Content Include="P2%286A%29.aspx" />
+    <Content Include="P2%286A%29.png" />
+    <Content Include="P2%286A2%29.png" />
+    <Content Include="P2%286A3%29.png" />
+    <Content Include="P2%286A4%29.png" />
+    <Content Include="P2%287C%29.aspx" />
+    <Content Include="P2%287C%29.png" />
+    <Content Include="P2%287C2%29.png" />
+    <Content Include="P2%287C3%29.png" />
+    <Content Include="P2%287C4%29.png" />
+    <Content Include="P2%288T%29.aspx" />
+    <Content Include="P2%288T%29.png" />
+    <Content Include="P2%288T2%29.png" />
+    <Content Include="P2%288T3%29.png" />
+    <Content Include="P2%288T4%29.png" />
+    <Content Include="P2%289C%29.aspx" />
+    <Content Include="P2%289C%29.png" />
+    <Content Include="P2%289C2%29.png" />
+    <Content Include="P2%289C3%29.png" />
+    <Content Include="P2%289C4%29.png" />
+    <Content Include="p2cart1.aspx" />
+    <Content Include="p2cart2.aspx" />
+    <Content Include="p2cart3.aspx" />
+    <Content Include="p2cart4.aspx" />
+    <Content Include="p2cart5.aspx" />
+    <Content Include="p2cart6.aspx" />
+    <Content Include="p2cart7.aspx" />
+    <Content Include="p2cart8.aspx" />
+    <Content Include="P3%2810A%29.png" />
+    <Content Include="P3%2810A2%29.png" />
+    <Content Include="P3%2810A3%29.png" />
+    <Content Include="P3%2810A4%29.png" />
+    <Content Include="P3%2811M%29.png" />
+    <Content Include="P3%2811M2%29.png" />
+    <Content Include="P3%2811M3%29.png" />
+    <Content Include="P3%2811M4%29.png" />
+    <Content Include="P3%2812T%29.png" />
+    <Content Include="P3%2812T2%29.png" />
+    <Content Include="P3%2812T3%29.png" />
+    <Content Include="P3%2812T4%29.png" />
+    <Content Include="P3%2813M%29.png" />
+    <Content Include="P3%2813M2%29.png" />
+    <Content Include="P3%2813M3%29.png" />
+    <Content Include="P3%2813M4%29.png" />
+    <Content Include="P3%2814C%29.png" />
+    <Content Include="P3%2814C2%29.png" />
+    <Content Include="P3%2814C3%29.png" />
+    <Content Include="P3%2814C4%29.png" />
+    <Content Include="P3%2815T%29.png" />
+    <Content Include="P3%2815T2%29.png" />
+    <Content Include="P3%2815T3%29.png" />
+    <Content Include="P3%2815T4%29.png" />
+    <Content Include="P3%2816L%29.png" />
+    <Content Include="P3%2816L2%29.png" />
+    <Content Include="P3%2816L3%29.png" />
+    <Content Include="P3%2816L4%29.png" />
+    <Content Include="P3%281M%29.png" />
+    <Content Include="P3%281M2%29.png" />
+    <Content Include="P3%281M3%29.png" />
+    <Content Include="P3%281M4%29.png" />
+    <Content Include="P3%282A%29.png" />
+    <Content Include="P3%282A2%29.png" />
+    <Content Include="P3%282A3%29.png" />
+    <Content Include="P3%282A4%29.png" />
+    <Content Include="P3%283C%29.png" />
+    <Content Include="P3%283C2%29.png" />
+    <Content Include="P3%283C3%29.png" />
+    <Content Include="P3%283C4%29.png" />
+    <Content Include="P3%284L%29.png" />
+    <Content Include="P3%284L2%29.png" />
+    <Content Include="P3%284L3%29.png" />
+    <Content Include="P3%284L4%29.png" />
+    <Content Include="P3%285C%29.png" />
+    <Content Include="P3%285C2%29.png" />
+    <Content Include="P3%285C3%29.png" />
+    <Content Include="P3%285C4%29.png" />
+    <Content Include="P3%286T%29.png" />
+    <Content Include="P3%286T2%29.png" />
+    <Content Include="P3%286T3%29.png" />
+    <Content Include="P3%286T4%29.png" />
+    <Content Include="P3%287L%29.png" />
+    <Content Include="P3%287L2%29.png" />
+    <Content Include="P3%287L3%29.png" />
+    <Content Include="P3%287L4%29.png" />
+    <Content Include="P3%288A%29.png" />
+    <Content Include="P3%288A2%29.png" />
+    <Content Include="P3%288A3%29.png" />
+    <Content Include="P3%288A4%29.png" />
+    <Content Include="P3%289L%29.png" />
+    <Content Include="P3%289L2%29.png" />
+    <Content Include="P3%289L3%29.png" />
+    <Content Include="P3%289L4%29.png" />
+    <Content Include="p3cart1.aspx" />
+    <Content Include="p3cart12.aspx" />
+    <Content Include="p3cart2.aspx" />
+    <Content Include="p3cart3.aspx" />
+    <Content Include="p3cart4.aspx" />
+    <Content Include="p3cart5.aspx" />
+    <Content Include="p3cart6.aspx" />
+    <Content Include="p3cart7.aspx" />
+    <Content Include="p3cart8.aspx" />
+    <Content Include="P4%2810A%29.aspx" />
+    <Content Include="P4%2811M%29.aspx" />
+    <Content Include="P4%2812T%29.aspx" />
+    <Content Include="P4%2813M%29.aspx" />
+    <Content Include="P4%2814C%29.aspx" />
+    <Content Include="P4%2815T%29.aspx" />
+    <Content Include="P4%2816L%29.aspx" />
+    <Content Include="P4%281M%29.aspx" />
+    <Content Include="P4%282A%29.aspx" />
+    <Content Include="P4%283C%29.aspx" />
+    <Content Include="P4%284L%29.aspx" />
+    <Content Include="P4%285C%29.aspx" />
+    <Content Include="P4%288A%29.aspx" />
+    <Content Include="P4%286T%29.aspx" />
+    <Content Include="P4%287L%29.aspx" />
+    <Content Include="P4%289L%29.aspx" />
+    <Content Include="Paymentcard.png" />
+    <Content Include="popup.css" />
+    <Content Include="POPUP_HTML.html" />
+    <Content Include="FeedBack.aspx" />
+    <Content Include="Feedback.css" />
+    <Content Include="footer.css" />
+    <Content Include="Global.asax" />
+    <Content Include="good.png" />
+    <Content Include="HomePage.aspx" />
+    <Content Include="Laptop.png" />
+    <Content Include="Login.css" />
+    <Content Include="Login_page.aspx" />
+    <Content Include="Main.css" />
+    <Content Include="Mobile.png" />
+    <Content Include="nav.css" />
+    <Content Include="okay.png" />
+    <Content Include="poor.png" />
+    <Content Include="POPUP_MSG.png" />
+    <Content Include="R1.jpg" />
+    <Content Include="R2.jpg" />
+    <Content Include="R3.png" />
+    <Content Include="Rough.aspx" />
+    <Content Include="Sell.aspx" />
+    <Content Include="SellAddress.aspx" />
+    <Content Include="shopping-cart.png" />
+    <Content Include="SignUp.aspx" />
+    <Content Include="SignUp.css" />
+    <Content Include="Product.css" />
+    <Content Include="singlepage.css" />
+    <Content Include="T%28PrivacyPolicy%29.html" />
+    <Content Include="T%28RefundPolicy%29.html" />
+    <Content Include="T%28WarrantyPolicy%29.html" />
+    <Content Include="Terms&amp;Cond.html" />
+    <Content Include="Terms.css" />
+    <Content Include="Terms.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminCategory.aspx.cs">
+      <DependentUpon>AdminCategory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminCategory.aspx.designer.cs">
+      <DependentUpon>AdminCategory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminProduct.aspx.cs">
+      <DependentUpon>AdminProduct.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminProduct.aspx.designer.cs">
+      <DependentUpon>AdminProduct.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All_Product.aspx.cs">
+      <DependentUpon>All_Product.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All_Product.aspx.designer.cs">
+      <DependentUpon>All_Product.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All_Product_2.aspx.cs">
+      <DependentUpon>All_Product_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All_Product_2.aspx.designer.cs">
+      <DependentUpon>All_Product_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All_Product_3.aspx.cs">
+      <DependentUpon>All_Product_3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All_Product_3.aspx.designer.cs">
+      <DependentUpon>All_Product_3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All_Product_4.aspx.cs">
+      <DependentUpon>All_Product_4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All_Product_4.aspx.designer.cs">
+      <DependentUpon>All_Product_4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="All_Product_5.aspx.cs">
+      <DependentUpon>All_Product_5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="All_Product_5.aspx.designer.cs">
+      <DependentUpon>All_Product_5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="C%28A%29.aspx.cs">
+      <DependentUpon>C%28A%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C%28A%29.aspx.designer.cs">
+      <DependentUpon>C%28A%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C%28C%29.aspx.cs">
+      <DependentUpon>C%28C%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C%28C%29.aspx.designer.cs">
+      <DependentUpon>C%28C%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C%28L%29.aspx.cs">
+      <DependentUpon>C%28L%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C%28L%29.aspx.designer.cs">
+      <DependentUpon>C%28L%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C%28M%29.aspx.cs">
+      <DependentUpon>C%28M%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C%28M%29.aspx.designer.cs">
+      <DependentUpon>C%28M%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="C%28T%29.aspx.cs">
+      <DependentUpon>C%28T%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="C%28T%29.aspx.designer.cs">
+      <DependentUpon>C%28T%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart%28H1%29.aspx.cs">
+      <DependentUpon>Cart%28H1%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart%28H1%29.aspx.designer.cs">
+      <DependentUpon>Cart%28H1%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart%28H10%29.aspx.cs">
+      <DependentUpon>Cart%28H10%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart%28H10%29.aspx.designer.cs">
+      <DependentUpon>Cart%28H10%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart%28H11%29.aspx.cs">
+      <DependentUpon>Cart%28H11%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart%28H11%29.aspx.designer.cs">
+      <DependentUpon>Cart%28H11%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart%28H12%29.aspx.cs">
+      <DependentUpon>Cart%28H12%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart%28H12%29.aspx.designer.cs">
+      <DependentUpon>Cart%28H12%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart%28H2%29.aspx.cs">
+      <DependentUpon>Cart%28H2%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart%28H2%29.aspx.designer.cs">
+      <DependentUpon>Cart%28H2%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart%28H3%29.aspx.cs">
+      <DependentUpon>Cart%28H3%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart%28H3%29.aspx.designer.cs">
+      <DependentUpon>Cart%28H3%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart%28H4%29.aspx.cs">
+      <DependentUpon>Cart%28H4%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart%28H4%29.aspx.designer.cs">
+      <DependentUpon>Cart%28H4%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart%28H5%29.aspx.cs">
+      <DependentUpon>Cart%28H5%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart%28H5%29.aspx.designer.cs">
+      <DependentUpon>Cart%28H5%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart%28H6%29.aspx.cs">
+      <DependentUpon>Cart%28H6%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart%28H6%29.aspx.designer.cs">
+      <DependentUpon>Cart%28H6%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart%28H7%29.aspx.cs">
+      <DependentUpon>Cart%28H7%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart%28H7%29.aspx.designer.cs">
+      <DependentUpon>Cart%28H7%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart%28H8%29.aspx.cs">
+      <DependentUpon>Cart%28H8%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart%28H8%29.aspx.designer.cs">
+      <DependentUpon>Cart%28H8%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cart%28H9%29.aspx.cs">
+      <DependentUpon>cart%28H9%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cart%28H9%29.aspx.designer.cs">
+      <DependentUpon>cart%28H9%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Checkout.aspx.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Checkout.aspx.designer.cs">
+      <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAQ.aspx.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAQ.aspx.designer.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FeedBack.aspx.cs">
+      <DependentUpon>FeedBack.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FeedBack.aspx.designer.cs">
+      <DependentUpon>FeedBack.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetDetails.aspx.cs">
+      <DependentUpon>GetDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetDetails.aspx.designer.cs">
+      <DependentUpon>GetDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="H1.aspx.cs">
+      <DependentUpon>H1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H1.aspx.designer.cs">
+      <DependentUpon>H1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H10.aspx.cs">
+      <DependentUpon>H10.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H10.aspx.designer.cs">
+      <DependentUpon>H10.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H11.aspx.cs">
+      <DependentUpon>H11.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H11.aspx.designer.cs">
+      <DependentUpon>H11.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H12.aspx.cs">
+      <DependentUpon>H12.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H12.aspx.designer.cs">
+      <DependentUpon>H12.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H2.aspx.cs">
+      <DependentUpon>H2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H2.aspx.designer.cs">
+      <DependentUpon>H2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H3.aspx.cs">
+      <DependentUpon>H3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H3.aspx.designer.cs">
+      <DependentUpon>H3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H4.aspx.cs">
+      <DependentUpon>H4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H4.aspx.designer.cs">
+      <DependentUpon>H4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H5.aspx.cs">
+      <DependentUpon>H5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H5.aspx.designer.cs">
+      <DependentUpon>H5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H6.aspx.cs">
+      <DependentUpon>H6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H6.aspx.designer.cs">
+      <DependentUpon>H6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H7.aspx.cs">
+      <DependentUpon>H7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H7.aspx.designer.cs">
+      <DependentUpon>H7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H8.aspx.cs">
+      <DependentUpon>H8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H8.aspx.designer.cs">
+      <DependentUpon>H8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="H9.aspx.cs">
+      <DependentUpon>H9.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="H9.aspx.designer.cs">
+      <DependentUpon>H9.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HomePage.aspx.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomePage.aspx.designer.cs">
+      <DependentUpon>HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login_page.aspx.cs">
+      <DependentUpon>Login_page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login_page.aspx.designer.cs">
+      <DependentUpon>Login_page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="NavFoot.Master.cs">
+      <DependentUpon>NavFoot.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NavFoot.Master.designer.cs">
+      <DependentUpon>NavFoot.Master</DependentUpon>
+    </Compile>
+    <Compile Include="offer.aspx.cs">
+      <DependentUpon>offer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="offer.aspx.designer.cs">
+      <DependentUpon>offer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="offercartlap.aspx.cs">
+      <DependentUpon>offercartlap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="offercartlap.aspx.designer.cs">
+      <DependentUpon>offercartlap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P1%2810C%29.aspx.cs">
+      <DependentUpon>P1%2810C%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P1%2810C%29.aspx.designer.cs">
+      <DependentUpon>P1%2810C%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P1%2811L%29.aspx.cs">
+      <DependentUpon>P1%2811L%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P1%2811L%29.aspx.designer.cs">
+      <DependentUpon>P1%2811L%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P1%2812A%29.aspx.cs">
+      <DependentUpon>P1%2812A%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P1%2812A%29.aspx.designer.cs">
+      <DependentUpon>P1%2812A%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P1%2813L%29.aspx.cs">
+      <DependentUpon>P1%2813L%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P1%2813L%29.aspx.designer.cs">
+      <DependentUpon>P1%2813L%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P1%2814M%29.aspx.cs">
+      <DependentUpon>P1%2814M%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P1%2814M%29.aspx.designer.cs">
+      <DependentUpon>P1%2814M%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P1%2815A%29.aspx.cs">
+      <DependentUpon>P1%2815A%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P1%2815A%29.aspx.designer.cs">
+      <DependentUpon>P1%2815A%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P1%2816T%29.aspx.cs">
+      <DependentUpon>P1%2816T%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P1%2816T%29.aspx.designer.cs">
+      <DependentUpon>P1%2816T%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P1%281L%29.aspx.cs">
+      <DependentUpon>P1%281L%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P1%281L%29.aspx.designer.cs">
+      <DependentUpon>P1%281L%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P1%282C%29.aspx.cs">
+      <DependentUpon>P1%282C%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P1%282C%29.aspx.designer.cs">
+      <DependentUpon>P1%282C%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P1%283M%29.aspx.cs">
+      <DependentUpon>P1%283M%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P1%283M%29.aspx.designer.cs">
+      <DependentUpon>P1%283M%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P1%284T%29.aspx.cs">
+      <DependentUpon>P1%284T%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P1%284T%29.aspx.designer.cs">
+      <DependentUpon>P1%284T%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P1%285M%29.aspx.cs">
+      <DependentUpon>P1%285M%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P1%285M%29.aspx.designer.cs">
+      <DependentUpon>P1%285M%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P1%286A%29.aspx.cs">
+      <DependentUpon>P1%286A%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P1%286A%29.aspx.designer.cs">
+      <DependentUpon>P1%286A%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P1%287T%29.aspx.cs">
+      <DependentUpon>P1%287T%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P1%287T%29.aspx.designer.cs">
+      <DependentUpon>P1%287T%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P1%288C%29.aspx.cs">
+      <DependentUpon>P1%288C%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P1%288C%29.aspx.designer.cs">
+      <DependentUpon>P1%288C%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P1%289T%29.aspx.cs">
+      <DependentUpon>P1%289T%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P1%289T%29.aspx.designer.cs">
+      <DependentUpon>P1%289T%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p1cart1.aspx.cs">
+      <DependentUpon>p1cart1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p1cart1.aspx.designer.cs">
+      <DependentUpon>p1cart1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p1cart2.aspx.cs">
+      <DependentUpon>p1cart2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p1cart2.aspx.designer.cs">
+      <DependentUpon>p1cart2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p1cart3.aspx.cs">
+      <DependentUpon>p1cart3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p1cart3.aspx.designer.cs">
+      <DependentUpon>p1cart3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p1cart4.aspx.cs">
+      <DependentUpon>p1cart4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p1cart4.aspx.designer.cs">
+      <DependentUpon>p1cart4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p1cart5.aspx.cs">
+      <DependentUpon>p1cart5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p1cart5.aspx.designer.cs">
+      <DependentUpon>p1cart5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p1cart6.aspx.cs">
+      <DependentUpon>p1cart6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p1cart6.aspx.designer.cs">
+      <DependentUpon>p1cart6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p1cart7.aspx.cs">
+      <DependentUpon>p1cart7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p1cart7.aspx.designer.cs">
+      <DependentUpon>p1cart7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p1cart8.aspx.cs">
+      <DependentUpon>p1cart8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p1cart8.aspx.designer.cs">
+      <DependentUpon>p1cart8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P2%2810T%29.aspx.cs">
+      <DependentUpon>P2%2810T%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P2%2810T%29.aspx.designer.cs">
+      <DependentUpon>P2%2810T%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P2%2811M%29.aspx.cs">
+      <DependentUpon>P2%2811M%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P2%2811M%29.aspx.designer.cs">
+      <DependentUpon>P2%2811M%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P2%2812A%29.aspx.cs">
+      <DependentUpon>P2%2812A%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P2%2812A%29.aspx.designer.cs">
+      <DependentUpon>P2%2812A%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P2%2813M%29.aspx.cs">
+      <DependentUpon>P2%2813M%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P2%2813M%29.aspx.designer.cs">
+      <DependentUpon>P2%2813M%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P2%2814L%29.aspx.cs">
+      <DependentUpon>P2%2814L%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P2%2814L%29.aspx.designer.cs">
+      <DependentUpon>P2%2814L%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P2%2815A%29.aspx.cs">
+      <DependentUpon>P2%2815A%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P2%2815A%29.aspx.designer.cs">
+      <DependentUpon>P2%2815A%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P2%2816C%29.aspx.cs">
+      <DependentUpon>P2%2816C%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P2%2816C%29.aspx.designer.cs">
+      <DependentUpon>P2%2816C%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P2%281M%29.aspx.cs">
+      <DependentUpon>P2%281M%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P2%281M%29.aspx.designer.cs">
+      <DependentUpon>P2%281M%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P2%282T%29.aspx.cs">
+      <DependentUpon>P2%282T%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P2%282T%29.aspx.designer.cs">
+      <DependentUpon>P2%282T%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P2%283L%29.aspx.cs">
+      <DependentUpon>P2%283L%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P2%283L%29.aspx.designer.cs">
+      <DependentUpon>P2%283L%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P2%284C%29.aspx.cs">
+      <DependentUpon>P2%284C%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P2%284C%29.aspx.designer.cs">
+      <DependentUpon>P2%284C%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P2%285L%29.aspx.cs">
+      <DependentUpon>P2%285L%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P2%285L%29.aspx.designer.cs">
+      <DependentUpon>P2%285L%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P2%286A%29.aspx.cs">
+      <DependentUpon>P2%286A%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P2%286A%29.aspx.designer.cs">
+      <DependentUpon>P2%286A%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P2%287C%29.aspx.cs">
+      <DependentUpon>P2%287C%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P2%287C%29.aspx.designer.cs">
+      <DependentUpon>P2%287C%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P2%288T%29.aspx.cs">
+      <DependentUpon>P2%288T%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P2%288T%29.aspx.designer.cs">
+      <DependentUpon>P2%288T%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P2%289C%29.aspx.cs">
+      <DependentUpon>P2%289C%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P2%289C%29.aspx.designer.cs">
+      <DependentUpon>P2%289C%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p2cart1.aspx.cs">
+      <DependentUpon>p2cart1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p2cart1.aspx.designer.cs">
+      <DependentUpon>p2cart1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p2cart2.aspx.cs">
+      <DependentUpon>p2cart2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p2cart2.aspx.designer.cs">
+      <DependentUpon>p2cart2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p2cart3.aspx.cs">
+      <DependentUpon>p2cart3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p2cart3.aspx.designer.cs">
+      <DependentUpon>p2cart3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p2cart4.aspx.cs">
+      <DependentUpon>p2cart4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p2cart4.aspx.designer.cs">
+      <DependentUpon>p2cart4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p2cart5.aspx.cs">
+      <DependentUpon>p2cart5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p2cart5.aspx.designer.cs">
+      <DependentUpon>p2cart5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p2cart6.aspx.cs">
+      <DependentUpon>p2cart6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p2cart6.aspx.designer.cs">
+      <DependentUpon>p2cart6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p2cart7.aspx.cs">
+      <DependentUpon>p2cart7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p2cart7.aspx.designer.cs">
+      <DependentUpon>p2cart7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p2cart8.aspx.cs">
+      <DependentUpon>p2cart8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p2cart8.aspx.designer.cs">
+      <DependentUpon>p2cart8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p3cart1.aspx.cs">
+      <DependentUpon>p3cart1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p3cart1.aspx.designer.cs">
+      <DependentUpon>p3cart1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p3cart12.aspx.cs">
+      <DependentUpon>p3cart12.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p3cart12.aspx.designer.cs">
+      <DependentUpon>p3cart12.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p3cart2.aspx.cs">
+      <DependentUpon>p3cart2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p3cart2.aspx.designer.cs">
+      <DependentUpon>p3cart2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p3cart3.aspx.cs">
+      <DependentUpon>p3cart3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p3cart3.aspx.designer.cs">
+      <DependentUpon>p3cart3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p3cart4.aspx.cs">
+      <DependentUpon>p3cart4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p3cart4.aspx.designer.cs">
+      <DependentUpon>p3cart4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p3cart5.aspx.cs">
+      <DependentUpon>p3cart5.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p3cart5.aspx.designer.cs">
+      <DependentUpon>p3cart5.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p3cart6.aspx.cs">
+      <DependentUpon>p3cart6.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p3cart6.aspx.designer.cs">
+      <DependentUpon>p3cart6.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p3cart7.aspx.cs">
+      <DependentUpon>p3cart7.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p3cart7.aspx.designer.cs">
+      <DependentUpon>p3cart7.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="p3cart8.aspx.cs">
+      <DependentUpon>p3cart8.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="p3cart8.aspx.designer.cs">
+      <DependentUpon>p3cart8.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P4%2810A%29.aspx.cs">
+      <DependentUpon>P4%2810A%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P4%2810A%29.aspx.designer.cs">
+      <DependentUpon>P4%2810A%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P4%2811M%29.aspx.cs">
+      <DependentUpon>P4%2811M%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P4%2811M%29.aspx.designer.cs">
+      <DependentUpon>P4%2811M%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P4%2812T%29.aspx.cs">
+      <DependentUpon>P4%2812T%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P4%2812T%29.aspx.designer.cs">
+      <DependentUpon>P4%2812T%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P4%2813M%29.aspx.cs">
+      <DependentUpon>P4%2813M%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P4%2813M%29.aspx.designer.cs">
+      <DependentUpon>P4%2813M%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P4%2814C%29.aspx.cs">
+      <DependentUpon>P4%2814C%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P4%2814C%29.aspx.designer.cs">
+      <DependentUpon>P4%2814C%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P4%2815T%29.aspx.cs">
+      <DependentUpon>P4%2815T%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P4%2815T%29.aspx.designer.cs">
+      <DependentUpon>P4%2815T%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P4%2816L%29.aspx.cs">
+      <DependentUpon>P4%2816L%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P4%2816L%29.aspx.designer.cs">
+      <DependentUpon>P4%2816L%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P4%281M%29.aspx.cs">
+      <DependentUpon>P4%281M%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P4%281M%29.aspx.designer.cs">
+      <DependentUpon>P4%281M%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P4%282A%29.aspx.cs">
+      <DependentUpon>P4%282A%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P4%282A%29.aspx.designer.cs">
+      <DependentUpon>P4%282A%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P4%283C%29.aspx.cs">
+      <DependentUpon>P4%283C%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P4%283C%29.aspx.designer.cs">
+      <DependentUpon>P4%283C%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P4%284L%29.aspx.cs">
+      <DependentUpon>P4%284L%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P4%284L%29.aspx.designer.cs">
+      <DependentUpon>P4%284L%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P4%285C%29.aspx.cs">
+      <DependentUpon>P4%285C%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P4%285C%29.aspx.designer.cs">
+      <DependentUpon>P4%285C%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P4%288A%29.aspx.cs">
+      <DependentUpon>P4%288A%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P4%288A%29.aspx.designer.cs">
+      <DependentUpon>P4%288A%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P4%286T%29.aspx.cs">
+      <DependentUpon>P4%286T%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P4%286T%29.aspx.designer.cs">
+      <DependentUpon>P4%286T%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P4%287L%29.aspx.cs">
+      <DependentUpon>P4%287L%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P4%287L%29.aspx.designer.cs">
+      <DependentUpon>P4%287L%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="P4%289L%29.aspx.cs">
+      <DependentUpon>P4%289L%29.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="P4%289L%29.aspx.designer.cs">
+      <DependentUpon>P4%289L%29.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rough.aspx.cs">
+      <DependentUpon>Rough.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rough.aspx.designer.cs">
+      <DependentUpon>Rough.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sell.aspx.cs">
+      <DependentUpon>Sell.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sell.aspx.designer.cs">
+      <DependentUpon>Sell.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SellAddress.aspx.cs">
+      <DependentUpon>SellAddress.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SellAddress.aspx.designer.cs">
+      <DependentUpon>SellAddress.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="NavFoot.Master" />
+    <None Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>49716</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44353/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,57 @@
+﻿.single-product {
+    margin-top: 80px;
+}
+
+    .single-product .col-2H img {
+        padding: 0;
+    }
+
+    .single-product .col-2H {
+        padding: 20px;
+    }
+
+    .single-product h4 {
+        margin: 20px 0;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .single-product select {
+        display: block;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    .single-product input {
+        width: 50px;
+        height: 40px;
+        padding-left: 10px;
+        font-size: 20px;
+        margin-right: 10px;
+        border: 1px solid #ff523b;
+    }
+
+input:focus {
+    outline: none;
+}
+
+.single-product .fa {
+    color: #ff523b;
+    margin-left: 10px;
+}
+
+.small-img-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.small-img-col {
+    flex-basis: 24%;
+    cursor: pointer;
+}
+.col-2H .Mainimg {
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.1);
+}
+.small-img-row{
+    margin-top:35px;
+}

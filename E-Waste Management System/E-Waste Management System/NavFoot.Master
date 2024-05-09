@@ -1,0 +1,131 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NavFoot.master.cs" Inherits="E_Waste_Management_System.NavFoot" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+  <title>E-waste Management</title>
+  <link rel="stylesheet" href="nav.css"/>
+  <link rel="stylesheet" href="Main.css"/>
+  <link rel="stylesheet" href="footer.css"/>
+  <link rel="stylesheet" href="Product.css"/>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+  <asp:ContentPlaceHolder ID="head" runat="server">
+  </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form2" runat="server">
+
+    <div class="wrapper">
+    <nav>
+      <input type="checkbox" id="show-search"/>
+      <input type="checkbox" id="show-menu"/>
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><asp:HyperLink runat="server" ID="hy_1" NavigateUrl="HomePage.aspx">𐌄-Ꮤ</asp:HyperLink></div>
+        <ul class="links">
+          <li class="dot"><asp:HyperLink runat="server" ID="HyperLink1" NavigateUrl="HomePage.aspx">Home</asp:HyperLink></li>
+          <li class="dot"><asp:HyperLink runat="server" ID="HyperLink2" NavigateUrl="Game.html">Play & Win</asp:HyperLink></li>
+          <li class="dot"><asp:HyperLink runat="server" ID="HyperLink13" NavigateUrl="Sell.aspx">Sell</asp:HyperLink></li>
+          <li class="dot">
+            <a href="#" class="desktop-link">Buy</a>
+            <input type="checkbox" id="show-features"/>
+            <label for="show-features">Buy</label>
+            <ul>
+              <li class="dot"><asp:HyperLink runat="server" ID="HyperLink3" NavigateUrl="C(M).aspx">Refurbished Phones</asp:HyperLink></li>
+              <li class="dot"><asp:HyperLink runat="server" ID="HyperLink4" NavigateUrl="C(L).aspx">Refurbished Laptops</asp:HyperLink></li>
+              <li class="dot"><asp:HyperLink runat="server" ID="HyperLink5" NavigateUrl="C(T).aspx">Refurbished Television</asp:HyperLink></li>
+              <li class="dot"><asp:HyperLink runat="server" ID="HyperLink6" NavigateUrl="C(C).aspx">Refurbished Camera</asp:HyperLink></li>
+            </ul>
+          </li>
+          <li class="dot">
+            <a href="#" class="desktop-link">More</a>
+            <input type="checkbox" id="show-services"/>
+            <label for="show-services">More</label>
+            <ul>
+              <li class="dot"><asp:HyperLink runat="server" ID="HyperLink7" NavigateUrl="About.html">About Us</asp:HyperLink></li>
+              <li class="dot"><asp:HyperLink runat="server" ID="HyperLink8" NavigateUrl="Contact.html">Contact Us</asp:HyperLink></li>
+              <li class="dot"><asp:HyperLink runat="server" ID="HyperLink9" NavigateUrl="T(PrivacyPolicy).html">privacy policy</asp:HyperLink></li>
+              <li class="dot"><asp:HyperLink runat="server" ID="HyperLink10" NavigateUrl="T(WarrantyPolicy).html">Warranty Policy</asp:HyperLink></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+       <asp:HyperLink runat="server" ID="HyperLink12" NavigateUrl="#"><asp:Image runat="server" ID="img_2" ImageUrl="~/shopping-cart.png" Height="30px" Width="30px" ></asp:Image></asp:HyperLink>
+      <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+      <form1 action="#" class="search-box">
+        <input type="text" placeholder="Type Something to Search..." required/>
+        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+      </form1>
+    </nav>
+  </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+
+
+        <div class="foot">
+  <footer class="footer">
+  	 <div class="container">
+  	 	<div class="row">
+  	 		<div class="footer-col">
+  	 			<h4>company</h4>
+  	 			<ul>
+  	 				<li><asp:HyperLink runat="server" ID="HyperLink11" NavigateUrl="About.html">About Us</asp:HyperLink></li>
+  	 				<li><asp:HyperLink runat="server" ID="HyperLink14" NavigateUrl="Terms&Cond.html">Terms & Conditions</asp:HyperLink></li>
+  	 				<li><asp:HyperLink runat="server" ID="HyperLink15" NavigateUrl="T(PrivacyPolicy).html">privacy policy</asp:HyperLink></li>
+                       <li><asp:HyperLink runat="server" ID="HyperLink30" NavigateUrl="Game.html">Play & Win</asp:HyperLink></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>get help</h4>
+  	 			<ul>
+  	 				<li><asp:HyperLink runat="server" ID="HyperLink16" NavigateUrl="FAQ.aspx">FAQ</asp:HyperLink></li>
+  	 				<li><asp:HyperLink runat="server" ID="HyperLink17" NavigateUrl="Contact.html">Contact Us</asp:HyperLink></li>
+  	 				<li><asp:HyperLink runat="server" ID="HyperLink18" NavigateUrl="Sell.aspx">Sell</asp:HyperLink></li>
+  	 				<li><asp:HyperLink runat="server" ID="HyperLink19" NavigateUrl="T(WarrantyPolicy).html">Warranty Policy</asp:HyperLink></li>
+  	 				<li><asp:HyperLink runat="server" ID="HyperLink20" NavigateUrl="T(RefundPolicy).html">Refund Policy</asp:HyperLink></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>online shop</h4>
+  	 			<ul>
+  	 				<li><asp:HyperLink runat="server" ID="HyperLink21" NavigateUrl="C(M).aspx">Phones</asp:HyperLink></li>
+  	 				<li><asp:HyperLink runat="server" ID="HyperLink22" NavigateUrl="C(L).aspx">Laptops</asp:HyperLink></li>
+                     <li><asp:HyperLink runat="server" ID="HyperLink29" NavigateUrl="C(A).aspx">ACs</asp:HyperLink></li>
+  	 				<li><asp:HyperLink runat="server" ID="HyperLink23" NavigateUrl="C(T).aspx">Television (TV's)</asp:HyperLink></li>
+  	 				<li><asp:HyperLink runat="server" ID="HyperLink24" NavigateUrl="C(C).aspx">Cameras</asp:HyperLink></li>
+  	 			</ul>
+  	 		</div>
+  	 		<div class="footer-col">
+  	 			<h4>follow us</h4>
+  	 			<div class="social-links">
+  	 				<asp:HyperLink runat="server" ID="HyperLink25" NavigateUrl="https://www.facebook.com/login/"><i class="fab fa-facebook-f"></i></asp:HyperLink>
+  	 				<asp:HyperLink runat="server" ID="HyperLink26" NavigateUrl="https://twitter.com/i/flow/login"><i class="fab fa-twitter"></i></asp:HyperLink>
+  	 				<asp:HyperLink runat="server" ID="HyperLink27" NavigateUrl="https://www.instagram.com/accounts/login/"><i class="fab fa-instagram"></i></asp:HyperLink>
+  	 				<asp:HyperLink runat="server" ID="HyperLink28" NavigateUrl="https://www.linkedin.com/signup/cold-join?trk=guest_homepage-basic_nav-header-join"><i class="fab fa-linkedin-in"></i></asp:HyperLink>
+  	 			</div>
+  	 		</div>
+  	 	</div>
+           <p style="margin-left:345px;margin-top:35px;">Copyright © 2022 E-Waste Management</p>
+  	 </div>
+  </footer>
+  </div>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
